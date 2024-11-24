@@ -1,0 +1,58 @@
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=adminpassword
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - shared_network
+
+  nodejs-builder:
+    container_name: nodejs-builder
+    image: imnagaraj/nodejs-builder
+    ports:
+      - "3000:3000"
+    networks:
+      - shared_network
+    volumes:
+      - ~/dockervolume/project-uploads:/usr/src/app/uploads
+  
+  p2p-downloader:
+    container_name: p2p-downloader
+    image: imnagaraj/p2p-downloader
+    ports:
+      - "5000:5000"
+    networks:
+      - shared_network
+    volumes:
+      - ~/dockervolume/downloader:/app/datasource
+  
+  p2p-cron-app:
+    container_name: p2p-cron-app
+    image: imnagaraj/p2p-cron-app
+    networks:
+      - shared_network
+    volumes:
+      - ~/dockervolume/downloader:/app/datasource
+      - ~/dockervolume/project-uploads:/usr/src/app/uploads
+  
+  react-app:
+    container_name: react-app
+    image: imnagaraj/react-app
+    ports:
+      - "3001:80"
+    networks:
+      - shared_network
+
+volumes:
+  mongo-data:
+    driver: local
+
+networks:
+  shared_network:
+    driver: bridge
