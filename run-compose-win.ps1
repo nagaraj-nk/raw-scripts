@@ -1,6 +1,6 @@
 # Define the URL of the Docker Compose file and the local file name
-$composeUrl = "https://example.com/docker-compose.yml"  # Replace with the actual URL
-$localFile = "docker-compose.yml"
+$composeUrl = "https://raw.githubusercontent.com/nagaraj-nk/raw-scripts/refs/heads/main/docker-compose.app-win.yml"  # Replace with the actual URL
+$localFile = "docker-compose.app-win.yml"
 
 # Download the Docker Compose file
 Write-Host "Downloading Docker Compose file from $composeUrl..."
