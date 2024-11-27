@@ -13,8 +13,7 @@ if (Test-Path $localFile) {
     # Run Docker Compose
     Write-Host "Starting Docker Compose..."
     docker-compose -f "$localFile" up -d
+    Remove-Item -Path "docker-compose.p2p-win.yml"
 } else {
     Write-Error "Failed to download the Docker Compose file."
 }
-
-Remove-Item -Path "docker-compose.p2p-win.yml"
