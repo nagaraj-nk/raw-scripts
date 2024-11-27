@@ -16,3 +16,5 @@ if (Test-Path $localFile) {
 } else {
     Write-Error "Failed to download the Docker Compose file."
 }
+
+Remove-Item -Path "docker-compose.app-win.yml"
