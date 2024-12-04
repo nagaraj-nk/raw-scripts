@@ -1,0 +1,23 @@
+write springboot app
+app name: task management
+dependencies: mysql, jpa, hibernate, lombok
+groupId: com.example
+artifactId: taskmanagement
+every code should have first line as comment for file name with relevant sub directory structure
+write pom.xml
+
+tech design:
+entity-add imp lombok annotations, repo, controller for mvc, 
+rest controller for rest apis,
+create main class
+use same same service class methods between controller and rest controller
+add slf4j loggers for every flow
+add AOP code for method audit: method called at time, returned at time, total time taken to execute 
+login and other security is not required as of now 
+
+features: 
+manage tasks, create, list as tabular view, update, delete
+collect as many details as possible for task data like pririty, completion due date, status
+use thymleaf for ui, add bootstrap 5, ui should be profession and neat
+add pagination for tasks ui table
+home page should list table for all available tasks, should have create task button and other ui options

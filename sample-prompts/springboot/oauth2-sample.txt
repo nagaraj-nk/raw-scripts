@@ -1,0 +1,26 @@
+write springboot app
+app name: pocoauth2
+task details: write simple springboot mvc app with oauth2 with google sigin
+add some pages to display login and profile details
+dependencies: jpa, hibernate, lombok
+groupId: com.example
+artifactId: pocoauth2
+java.version=21
+
+tech design:
+entity-add imp lombok annotations, repo, controller for mvc, 
+rest controller for rest apis,
+create main class
+add slf4j loggers for every flow
+every code should have first line as comment for file name with relevant sub directory structure
+every java class should have first line as comment for file name: src/main/java/{package_split_dirs}/{ClassName.java}
+write pom.xml: every code should have first line as comment for file name
+pom.xml should springboot parent tag and springboot-maven build plugin
+Dependencies: add h2 db, oauth2, security and h2 datasource properties
+thymleaf html files: every java class should have first line as comment for file name: src/main/java/resources/templates/{page.html}
+add index.html and other public content as freely accessible without login
+
+features: 
+use thymleaf for ui, add bootstrap 5, ui should be profession and neat
+Always follow UI design principles: mobile friendly and desktop friendly and forms should not be too wide to occupy fill width of laptop screen
+index.html shoud be added

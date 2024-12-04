@@ -1,0 +1,41 @@
+write express backend app
+app name: task management
+task details: write code for task management app and rest services, dont write ejs and views
+it is not mvc app, rest service app, 
+running on port localhost:3001, will be accessed by webapp from localhost:3002
+enable cors accordingly
+task details are stored as data/db.json, if not there, create it initially with empty json array
+
+tech design:
+add loggers for every flow
+every code should have first line as comment for file name with relevant sub directory structure
+every js file should have first line as comment for file name: src/{filename.js}
+dir structure:
+backend/<express-app-files>
+Example: first line of app.js is : backend/src/app.js, follow for remaining files for relative paths
+write package.json 
+
+write frontend app with html, css, jquery
+features: 
+every code should have first line as comment for file name with relevant sub directory structure
+dir structure
+frontend/index.html
+frontend/html/<remaining-html-files>
+frontend/css/styles.css
+frontend/js/page-wise-scripts.js
+frontend/js/any-utils.js
+Example: first line of index.html is : frontend/index.html, follow for remaining files for relative paths
+bootstrap 5, ui should be profession and neat
+Always follow UI design principles: mobile friendly and desktop friendly and forms should not be too wide to occupy fill width of laptop screen
+use jquery ajax to connect backend  
+make ajax call as common method and access from all places
+home page should display all tasks for today, 
+also display backlog tasks which were not completed so far
+create task option
+add navbar for all addition options and features
+all tasks page should display all tasks with pagination with html bordered table
+all tasks page table grid should have option to mark task as completed if it is not completed already 
+
+
+data:
+task: id, name, status, created_on, 

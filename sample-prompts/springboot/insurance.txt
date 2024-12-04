@@ -1,0 +1,26 @@
+write springboot app
+app name: goldenlife
+task details: write code for insurance website mvc app and rest services
+dependencies: mysql, jpa, hibernate, lombok
+groupId: com.example
+artifactId: goldenlife
+java.version=17
+
+tech design:
+entity-add imp lombok annotations, repo, controller for mvc, 
+rest controller for rest apis,
+create main class
+use same same service class methods between controller and rest controller
+add slf4j loggers for every flow
+add AOP code for method audit: method called at time, returned at time, total time taken to execute 
+every code should have first line as comment for file name with relevant sub directory structure
+every java class should have first line as comment for file name: src/main/java/{package_split_dirs}/{ClassName.java}
+write pom.xml: every code should have first line as comment for file name
+pom.xml should springboot parent tag
+Dependencies: Use this dependency if mysql is required in conversation com.mysql.mysql-connector-j, also add h2 db, and h2 datasource properties
+thymleaf html files: every java class should have first line as comment for file name: src/main/java/resources/templates/{page.html}
+add index.html and other public content as freely accessible without login
+
+features: 
+use thymleaf for ui, add bootstrap 5, ui should be profession and neat
+Always follow UI design principles: mobile friendly and desktop friendly and forms should not be too wide to occupy fill width of laptop screen

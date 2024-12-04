@@ -1,0 +1,15 @@
+write express app
+app name: goldenlife
+task details: write code for insurance website mvc app and rest services
+dependencies: mysql
+
+tech design:
+add loggers for every flow
+add code for method audit: method called at time, returned at time, total time taken to execute 
+every code should have first line as comment for file name with relevant sub directory structure
+every js file should have first line as comment for file name: src/{filename.js}
+write package.json: every code should have first line as comment for file name
+
+features: 
+use thymleaf for ui, add bootstrap 5, ui should be profession and neat
+Always follow UI design principles: mobile friendly and desktop friendly and forms should not be too wide to occupy fill width of laptop screen
